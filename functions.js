@@ -84,9 +84,10 @@ function getChannelByVideoTitle(videoTitle, channels) {
  * Hint: use string method `.includes()` and iteration method `.filter()`
  ****************************************************************/
 function searchChannels(query, channels) {
-  // Your code here
+  
+ return channels.filter( x => x.name.includes(query) /*&& x.description.includes(query)*/ );
 }
-// console.log(searchChannels("the", channels))
+ console.log(searchChannels("the", channels))
 
 module.exports = {
   getChannelName,
